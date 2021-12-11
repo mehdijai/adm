@@ -24,6 +24,7 @@ class UsersController extends Controller
                 \App\QueryFilters\Sort::class,
             ])
             ->thenReturn()
+            ->latest()
             ->with('agence.vehicules')
             ->paginate(25);
 

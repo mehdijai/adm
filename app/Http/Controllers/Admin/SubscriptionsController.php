@@ -26,6 +26,7 @@ class SubscriptionsController extends Controller
                 \App\QueryFilters\Sort::class,
             ])
             ->thenReturn()
+            ->latest()
             ->with(['user.agence', 'plan'])
             ->paginate(25);
 

@@ -26,6 +26,7 @@ class AdminsController extends Controller
                 \App\QueryFilters\Sort::class,
             ])
             ->thenReturn()
+            ->latest()
             ->paginate(25);
 
         return view('admins.admins.index')->with(['admins' => $admins]);
