@@ -1,0 +1,5 @@
+[19-Oct-2021 11:35:51 America/New_York] PHP Warning:  require(/home/medoomie/admv2/vendor/autoload.php): Failed to open stream: No such file or directory in /home/medoomie/admv2/artisan on line 18
+[19-Oct-2021 11:35:51 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/home/medoomie/admv2/vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/medoomie/admv2/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/medoomie/admv2/artisan on line 18

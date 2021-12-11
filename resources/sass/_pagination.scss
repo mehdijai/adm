@@ -1,0 +1,29 @@
+.paginator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    
+    li{
+        cursor: pointer;
+
+        *{
+            background-color: $red !important;
+            color: $white !important;
+            font-weight: 500 !important;
+            border: none !important;
+            transition: .2s ease-in-out;
+
+            &:hover, &:focus{
+                background-color: darken($color: $red, $amount: 5) !important;
+            }
+        }
+    }
+
+    .active{
+        *{
+            background-color: darken($color: $red, $amount: 5) !important;
+        }
+    }
+
+}

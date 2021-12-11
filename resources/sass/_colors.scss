@@ -1,0 +1,233 @@
+$blue-light: #438FBE;
+$blue-dark: #154461;
+$blue: #0F5682;
+$red: #AD2F2F;
+$white-light: #FBFAFA;
+$white: #d8d6d6;
+$black: #1F1F1F;
+
+$state-active: rgb(122, 236, 122);
+$state-pending: rgb(236, 173, 122);
+$state-failed: rgb(236, 122, 122);
+
+.color{
+
+    &-blue{
+        
+        &-light{
+            color: #438FBE;
+
+            &.hover:hover{
+                color: darken($color: #438FBE, $amount: 5);
+            }
+        }
+        
+        &-dark{
+            color: #154461;
+
+            &.hover:hover{
+                color: darken($color: #154461, $amount: 5);
+            }
+        }  
+        
+        color: #0F5682;
+
+        &.hover:hover{
+            color: darken($color: #0F5682, $amount: 5);
+        }
+    }
+
+    &-red{
+
+        &-light{
+            color: #AD2F2F;
+
+            &.hover:hover{
+                color: darken($color: #AD2F2F, $amount: 5);
+            }
+        }  
+
+        color: #822323;
+
+        &.hover:hover{
+            color: darken($color: #822323, $amount: 5);
+        }
+    }
+
+    &-white{
+
+        &-lighter{
+            color: #FBFAFA;
+
+            &.hover:hover{
+                color: darken($color: #FBFAFA, $amount: 5);
+            }
+        }
+
+        &-full{
+            color: #fff;
+
+            &.hover:hover{
+                color: darken($color: #fff, $amount: 5);
+            }
+        }
+
+        color: #d8d6d6;
+
+        &.hover:hover{
+            color: lighten($color: #d8d6d6, $amount: 10);
+        }
+    }
+
+    &-black{
+        color: #1F1F1F;
+
+        &.hover:hover{
+            color: darken($color: #1F1F1F, $amount: 5);
+        }
+    }
+
+    &-danger{
+        color: #bb4848;
+
+        &.hover:hover{
+            color: darken($color: #bb4848, $amount: 5);
+        }
+    }
+
+    &-success{
+        color: #5a945a;
+
+        &.hover:hover{
+            color: darken($color: #5a945a, $amount: 5);
+        }
+    }
+
+    &-info{
+        color: #3d80a7;
+
+        &.hover:hover{
+            color: darken($color: #3d80a7, $amount: 5);
+        }
+    }
+
+    &-warning{
+        color: #d49751;
+
+        &.hover:hover{
+            color: darken($color: #d49751, $amount: 5);
+        }
+    }
+
+}
+
+.bgc{
+
+    &-blue{
+        
+        &-light{
+            background-color: #438FBE;
+
+            &.hover:hover{
+                background-color: darken($color: #438FBE, $amount: 5);
+            }
+        }
+        
+        &-dark{
+            background-color: #154461;
+
+            &.hover:hover{
+                background-color: darken($color: #154461, $amount: 5);
+            }
+        }  
+        
+        background-color: #0F5682;
+
+        &.hover:hover{
+            background-color: darken($color: #0F5682, $amount: 5);
+        }
+    }
+
+    &-red{
+
+        &-light{
+            background-color: #AD2F2F;
+
+            &.hover:hover{
+                background-color: lighten($color: #AD2F2F, $amount: 5);
+            }
+        }  
+
+        background-color: #822323;
+
+        &.hover:hover{
+            background-color: darken($color: #822323, $amount: 5);
+        }
+    }
+
+    &-white{
+
+        &-lighter{
+            background-color: #FBFAFA;
+
+            &.hover:hover{
+                background-color: darken($color: #FBFAFA, $amount: 5);
+            }
+        }
+
+        &-full{
+            background-color: #fff;
+
+            &.hover:hover{
+                background-color: darken($color: #fff, $amount: 5);
+            }
+        }
+
+        background-color: #d8d6d6;
+
+        &.hover:hover{
+            background-color: darken($color: #d8d6d6, $amount: 5);
+        }
+    }
+
+    &-black{
+        background-color: #1F1F1F;
+
+        &.hover:hover{
+            background-color: darken($color: #1F1F1F, $amount: 5);
+        }
+    }
+
+    &-danger{
+        background-color: #bb4848;
+
+        &.hover:hover{
+            background-color: darken($color: #bb4848, $amount: 5);
+        }
+    }
+
+    &-success{
+        background-color: #5a945a;
+
+        &.hover:hover{
+            background-color: darken($color: #5a945a, $amount: 5);
+        }
+    }
+
+    &-info{
+        background-color: #3d80a7;
+
+        &.hover:hover{
+            background-color: darken($color: #3d80a7, $amount: 5);
+        }
+    }
+
+    &-warning{
+        background-color: #d49751;
+
+        &.hover:hover{
+            background-color: darken($color: #d49751, $amount: 5);
+        }
+    }
+
+}

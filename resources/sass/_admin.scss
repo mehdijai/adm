@@ -1,0 +1,418 @@
+.panel{
+
+    padding: 40px;
+
+    .menu{
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+
+        ul{
+            list-style: none;
+            margin: 0;
+            margin-top: 15px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            li{
+                padding: 5px 10px;
+                border-radius: 5px;
+                background-color: lighten($white, 13);
+                margin: 0;
+                cursor: pointer;
+                transition: 0.4s ease-in-out;
+
+                &:hover{
+                    background-color: lighten($white, 15);
+                    padding: 5px 20px;
+                }
+
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .statistics{
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+
+        ul{
+            list-style: none;
+            margin: 0;
+            margin-top: 15px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            li{
+                padding: 5px 10px;
+                border-radius: 5px;
+                margin: 0;
+
+                text-align: center;
+
+                span{
+                    display: block;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+.admin-layout{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header{
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        span{
+            padding: 5px 10px;
+        }
+
+        a{
+            margin-left: 20px;
+            display: flex;
+            padding: 5px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            font-weight: 500;
+            font-size: 14px;
+
+            &:hover{
+                background-color: darken(#fff, 2);
+                padding: 5px 20px;
+            }
+            .icon{
+                width: 20px;
+            }
+        }
+    }
+
+    .search-bar{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .table-list{
+        margin-top: 20px;
+        width: 100%;
+        .content{
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            @extend .shadow;
+
+            td{
+                border: none;
+                padding: 10px;
+                width: fit-content;
+            }
+
+            thead{
+                font-weight: 700;
+                
+                td:first-child{
+                    width: 30px !important;
+                }
+            }
+            
+            tr{
+                background-color: darken($color: #fff, $amount: 2);
+
+                .x-actions{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin: 0;
+
+                    button{
+                        background-color: transparent !important;
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+
+                .state{
+                    &-active{
+                        background-color: $state-active;
+                    }
+
+                    &-expired{
+                        background-color: $state-failed;
+                    }
+
+                    &-pending{
+                        background-color: $state-pending;
+                    }
+                }
+
+                .reciept{
+                    &-recived{
+                        background-color: $state-active;
+                    }
+                    &-pending{
+                        background-color: $state-pending;
+                    }
+                }
+
+                .invoice{
+
+                    a{
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background-color: $white-light !important;
+                    }
+
+                    &-pending{
+                        background-color: $state-pending;
+                    }
+                    &-sent{
+                        background-color: $state-active;
+                    }
+                }
+            }
+        }
+    }
+    
+    .settings-container{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        
+        @media (max-width: 1234px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        align-items: start;
+        column-gap: 5px;
+        row-gap: 5px;
+
+        .list{
+            .content{
+                td{
+                    width: fit-content !important;
+                    text-align: center;
+
+                    div{
+                        width: 100%;
+                        padding: 0;
+
+                        .icon{
+                            margin: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .settings{
+            width: 100%;
+            padding: 40px;
+
+            display: grid;  
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            row-gap: 10px;
+            column-gap: 10px;
+            
+            .parameter{
+                display: block;
+                width: 100%;
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+                @extend .shadow;
+
+                .display{
+
+                    .header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .icon{
+                            cursor: pointer;
+                        }
+                    }
+
+                    .data{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+                        align-items: center;
+
+                        .item{
+                            background-color: $blue;
+                            padding: 4px 8px;
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: #fff;
+                            margin: 5px 3px;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            transition: .2s ease-in-out;
+
+                            &:hover{
+                                background-color: darken($color: $blue, $amount: 5);
+                            }
+                        }
+                    }
+                }
+
+                .edit{
+
+                    .header{
+                        display: flex;
+                        align-items: center;
+
+                        .title{
+                            margin-right: auto;
+                        }
+
+                        .btn{
+                            padding: 2px 5px;
+                            border-radius: 5px;
+                            font-size: 11px;
+                            font-weight: 500;
+                            margin: 0 2px;
+                        }
+                    }
+
+                    .form{
+                        margin-top: 10px;
+
+                        .flex{
+                            align-items: center;
+
+                            span{
+                                display: flex;
+                                align-items: center;
+                                background-color: $white;
+                                border-radius: 5px;
+                                padding: 5px 10px;
+                                margin-left: 10px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                cursor: pointer;
+                                transition: .2s ease-in-out;
+                                .icon{
+                                    width: 15px;
+                                }
+
+                                &:hover{
+                                    background-color: lighten($color: $white, $amount: 5);
+                                }
+                            }
+                        }
+                        .data{
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-top: 10px;
+                            align-items: center;
+                            
+                            .item{
+                                background-color: $white;
+                                padding: 4px 8px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                color: $black;
+                                margin: 5px 3px;
+                                border-radius: 6px;
+                                cursor: pointer;
+                                transition: .2s ease-in-out;
+                                display: flex;
+                                align-items: center;
+
+                                .icon{
+                                    height: 15px !important;
+                                    
+
+                                }
+
+                                &:hover{
+                                    background-color: darken($color: $white, $amount: 5);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offers-form{
+    margin-top: 10px;
+
+    .flex{
+        align-items: center;
+
+        span{
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-left: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+            .icon{
+                width: 15px;
+            }
+
+            &:hover{
+                background-color: lighten($color: $white, $amount: 5);
+            }
+        }
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: start;
+        
+        
+        .item{
+            background-color: $white;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: $black;
+            margin: 5px 3px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+            display: flex;
+            align-items: center;
+
+            .icon{
+                height: 15px !important;
+                cursor: pointer
+            }
+
+            &:hover{
+                background-color: darken($color: $white, $amount: 5);
+            }
+        }
+    }
+}
