@@ -42,6 +42,7 @@
                     <td>Agence</td>
                     <td>Ville</td>
                     <td>N° Vehicules</td>
+                    <td>Created at</td>
                     <td>Actions</td>
                 </thead>
                 @if($users->isNotEmpty())
@@ -54,7 +55,8 @@
                         <td>{{$user->agence->tel}}</td>
                         <td>{{$user->agence->name}}</td>
                         <td>{{$user->agence->city->city}} - {{$user->agence->city->secteur}}</td>
-                        <td>{{count($user->agence->vehicules)}}</td>
+                        <td><a href="{{route('admin.vehicules.index') . '?search=' . $user->name}}"><strong>{{count($user->agence->vehicules)}}</strong></a></td>
+                        <td>{{$user->created_at->diffForHumans()}}</td>
     
                         <td class="x-actions">
                             <a href="{{route('admin.vehicules.create', ['id' => $user->id])}}"><x-heroicon-s-plus class="icon color-success" /></a>

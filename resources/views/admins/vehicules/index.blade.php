@@ -36,7 +36,7 @@
                     <td>Matricule</td>
                     <td>Type</td>
                     <td>User ID</td>
-                    <td>User CIN</td>
+                    <td>User Name</td>
                     <td>Marque</td>
                     <td>Gamme</td>
                     <td>Ville</td>
@@ -50,7 +50,7 @@
                         <td>{{$vehicule->matricule}}</td>
                         <td>{{$vehicule->type}}</td>
                         <td>{{$vehicule->agence->user_id}}</td>
-                        <td>{{$vehicule->agence->user->cin}}</td>
+                        <td><a href="{{route('admin.users.index') . '?search=' . $vehicule->agence->user->name}}"><strong>{{$vehicule->agence->user->name}}</strong></a></td>
                         <td>{{$vehicule->marque->marque}}</td>
                         <td>{{$vehicule->marque->gamme}}</td>
                         <td>{{$vehicule->agence->city->city}}</td>
