@@ -36,7 +36,7 @@
                     <option value="" selected>Séléctionner la marque</option>
 
                     @foreach ($marques as $key => $marque)
-                        <optgroup label={{$key}}">
+                        <optgroup label={{$key}}>
                             @foreach ($marque as $gamme)
                                 <option value="{{$gamme['id']}}">{{ucfirst($gamme['gamme'])}}</option>
                             @endforeach
