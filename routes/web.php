@@ -42,7 +42,7 @@ Route::get('/', [HomeController::class, 'index'])->name("home");
 
 Route::get("sitemap.xml" , function () {
     return \Illuminate\Support\Facades\Redirect::to('sitemap.xml');
-});
+})->name('sitemap');
  
 Route::get('/vehicules', [HomeController::class, 'vehicules'])->name("vehicules");
 
