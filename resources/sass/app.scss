@@ -10,17 +10,47 @@
 @import "admin";
 @import "pagination";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .adm-body{
     min-height: 100vh !important;
     position: relative !important;
-    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+#to-top{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    padding: 0.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue !important;
+    color: $white !important;
+    box-shadow: 0 20px 50px rgba(30,30,30, 0.5);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover{
+        background-color: $blue-light !important;
+    }
+
+    .icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
 .adm-footer{
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
     padding: 10px;
+    font-size: 0.7rem !important;
 }
 
 a{

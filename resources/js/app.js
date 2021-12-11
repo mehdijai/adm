@@ -2,6 +2,22 @@ const { default: axios } = require('axios');
 require('./bootstrap');
 window.Vue = require('vue').default;
 
+   
+window.onscroll = function() {
+    let mybutton = document.getElementById('to-top')
+
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        mybutton.style.display = 'flex';
+    } else {
+        mybutton.style.display = 'none';
+    }
+};
+
+document.getElementById('to-top').addEventListener('click', (e) => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+})
+
 if (process.env.MIX_ENV_MODE === 'production') {
     Vue.config.devtools = false;
     Vue.config.debug = false;

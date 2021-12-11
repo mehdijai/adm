@@ -48,9 +48,16 @@
             {{ $slot }}
         </main>
 
-        <footer class="flex items-center justify-center bgc-white-lighter adm-footer">          
+        <footer class="flex items-center justify-center bgc-white-lighter adm-footer">
+            <div>
+
+            </div>
             <span class="weight-700 color-black">AUTODRIVEMAROC © {{ Date("Y") }} - POWERED BY <a href="https://www.medostudios.com">MEDOSTUDIOS</a></span>
         </footer>
+
+        <div id="to-top">
+            <x-heroicon-o-chevron-up class="icon"/>
+        </div>
 
         <script src="/js/app.js" defer></script>
         @livewireScripts
