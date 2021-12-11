@@ -12,6 +12,8 @@
                 <li><a class="color-black navLinks" href="{{route('admin.plans.index')}}">Manage plans</a></li>
                 <li><a class="color-black navLinks" href="{{route('admin.subscriptions.index')}}">Manage subscriptions</a></li>
                 <li><a class="color-black navLinks" href="{{route('admin.settings.index')}}">Manage settings</a></li>
+                <li><a class="color-black navLinks" href="{{route('admin.cities.index')}}">Manage cities</a></li>
+                <li><a class="color-black navLinks" href="{{route('admin.marques.index')}}">Manage marques</a></li>
             </ul>
         </div>
 

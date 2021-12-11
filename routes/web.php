@@ -23,7 +23,9 @@ use App\Http\Controllers\Admin\PlansController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Agence\VehsController;
 use App\Http\Controllers\Admin\AdminsController;
+use App\Http\Controllers\Admin\CitiesController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\Admin\MarquesController;
 use App\Http\Controllers\AgenceSupportController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\VehiculesController;
@@ -182,6 +184,26 @@ Route::middleware(['auth:sanctum', 'verified', 'role:admin'])->prefix('admin')->
         Route::post('/update', [VehiculesController::class, 'update'])->name('update');
         Route::get('/create/{id}', [VehiculesController::class, 'create'])->name('create');
         Route::post('/store', [VehiculesController::class, 'store'])->name('store');
+        
+    });
+
+    Route::prefix('cities')->name('cities.')->group(function () {
+
+        Route::get('/', [CitiesController::class, 'index'])->name('index');
+        Route::post('/delete', [CitiesController::class, 'delete'])->name('delete');
+        Route::get('/edit/{id}', [CitiesController::class, 'edit'])->name('edit');
+        Route::post('/update', [CitiesController::class, 'update'])->name('update');
+        Route::post('/clean', [CitiesController::class, 'clean'])->name('clean');
+        
+    });
+
+    Route::prefix('marques')->name('marques.')->group(function () {
+
+        Route::get('/', [MarquesController::class, 'index'])->name('index');
+        Route::post('/delete', [MarquesController::class, 'delete'])->name('delete');
+        Route::get('/edit/{id}', [MarquesController::class, 'edit'])->name('edit');
+        Route::post('/update', [MarquesController::class, 'update'])->name('update');
+        Route::post('/clean', [MarquesController::class, 'clean'])->name('clean');
         
     });
 

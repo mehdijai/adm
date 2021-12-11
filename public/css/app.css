@@ -10641,7 +10641,6 @@ h3 {
 .admin-layout .table-list .content tr .x-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   margin: 0;
 }

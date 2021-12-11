@@ -5,26 +5,7 @@
     @section('description', '')
     @section('og-image', $vehicules->first()->pics()->where('is_thumbnail', true)->get()[0]->image_path)
 
-    <div class="v-filter bgc-white" x-data="{
-        open: false,
-        options: [],
-        opts: '',
-        addOption(e){
-            let new_option = e.target.value
-            if(new_option != ''){
-                this.options.push(new_option)
-                e.target.value = ''
-                this.opts = JSON.stringify(this.options)
-            }
-        },
-        deleteOption(option){
-            let index = this.options.indexOf(option)
-            if (index > -1) {
-                this.options.splice(index, 1);
-            }
-            this.opts = JSON.stringify(this.options)
-        },
-    }">
+    <div class="v-filter bgc-white" x-data="{open: false}">
 
         <div class="controllers">
             <span class="c-state labels weight-800">{{$vehicules->total()}} voitures</span>
@@ -119,30 +100,6 @@
             <div class="filter-inputs">
                 <x-jet-label class="labels wight-500 color-blue" for="prixmin">Prix maximal</x-jet-label>
                 <x-jet-input name="prix_max" id="prixmax" type="number" placeholder="{{$prix_max}}"></x-jet-input>
-            </div>
-
-            <div class="filter-options">
-
-                <div class="filter-inputs">
-                    <x-jet-label class="labels wight-500 color-blue" for="options">Options</x-jet-label>
-                    <select @change="addOption" id="options" class="w-full focus:ring focus:ring-red-200 focus:ring-opacity-50 rounded-sm bgc-white-full inputTxt">
-                        <option value="" selected>Séléctionnez les options que vous désirer</option>
-
-                        @foreach ($options as $option)
-                            <option value="{{$option}}">{{ucfirst($option)}}</option>
-                        @endforeach
-
-                    </select>
-                </div>
-
-                <input x-model="opts" type="hidden" name="options">
-
-                <template x-for="option in options">
-                    <div  class="option bgc-blue hover" >
-                        <span class="optionTxt color-white label" x-text="option"></span>
-                        <x-heroicon-s-x-circle @click="deleteOption(option)" class="icon color-white hover"/>
-                    </div>
-                </template >
             </div>
 
             <div class="filter-submit">
