@@ -19,6 +19,7 @@ use App\Http\Controllers\PlanController;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\SitemapXmlController;
 use App\Http\Controllers\Admin\PlansController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Agence\VehsController;
@@ -65,9 +66,7 @@ Route::get('/slug', function(){
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
 
-Route::get("sitemap.xml" , function () {
-    return \Illuminate\Support\Facades\Redirect::to('sitemap.xml');
-})->name('sitemap');
+Route::get('/sitemap.xml' , [SitemapXmlController::class, 'index'])->name('sitemap');
  
 Route::get('/vehicules', [HomeController::class, 'vehicules'])->name("vehicules");
 
