@@ -16,8 +16,8 @@
             <form method="GET" class="ml-3">
                 <x-jet-label class="labels wight-500 color-blue" for="sort" value="{{ __('Sort') }}" />
                 <select class="w-full focus:ring focus:ring-red-200 focus:ring-opacity-50 rounded-sm bgc-white-full inputTxt" name="sort">
-                    <option value="created_at-asc" @if (request('sort') == 'created_at-asc') selected @endif >Oldest</option>
                     <option value="created_at-desc" @if (request('sort') == 'created_at-desc') selected @endif >Newest</option>
+                    <option value="created_at-asc" @if (request('sort') == 'created_at-asc') selected @endif >Oldest</option>
                     <option value="matricule-asc" @if (request('sort') == 'matricule-asc') selected @endif>Matricule &#8593; </option>
                     <option value="matricule-desc" @if (request('sort') == 'matricule-desc') selected @endif>Matricule &#8595; </option>
                     <option value="type-asc" @if (request('sort') == 'type-asc') selected @endif>Type &#8593; </option>
