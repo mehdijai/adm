@@ -165,7 +165,7 @@
         
             <div align="center" @if($vehicule->vip) class="vp" @endif>
                 
-                <div class="car-card bgc-white"  onclick="window.open('/vehicule/' + {{$vehicule->id}}, '_self')">
+                <a href="{{route('vehicule', $vehicule->slug)}}" class="car-card bgc-white">
     
                     <div class="cc-name" align="left">
                         <span class="card-name color-black">{{ucfirst($vehicule->marque->marque . ' ' . $vehicule->marque->gamme)}}</span>
@@ -186,7 +186,7 @@
                         </div>
                 
                     </div>
-                </div>
+                </a>
             </div>
     
         @endforeach

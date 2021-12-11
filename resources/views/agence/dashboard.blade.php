@@ -34,16 +34,16 @@
                                         <button style="background-color: transparent; padding:0; margin:0;" type="submit" id="delete-btn" class="color-black navLinks">Supprimer</button>
                                     </form>
                                 </div>
-                                <div class="item" onclick="window.open('/vehs/edit/' + {{$vehicule->id}}, '_self')">
+                                <a class="item" href="{{route('vehs.edit', $vehicule->id)}}">
                                     <span class="color-black navLinks">Modifer</span>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 
-                    <div class="cc-img" onclick="window.open('/veh/' + {{$vehicule->id}}, '_self')">
+                    <a class="cc-img" href="{{route('vehs.view', $vehicule->id)}}">
                         <img src="{{$vehicule->pics()->where('is_thumbnail', true)->get()[0]->image_path}}" alt="{{ucfirst($vehicule->marque->marque . ' ' . $vehicule->marque->gamme)}}">
-                    </div>
+                    </a>
                 
                     <div class="cc-footer">
                 

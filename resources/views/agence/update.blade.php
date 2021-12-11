@@ -56,7 +56,7 @@
                         <div class="MatInfo">
                             <x-heroicon-o-information-circle id="infoBtn" class="ml-2 mb-1 color-blue cursor-pointer x-icon" @mouseover="openinfo" @mouseleave="closeinfo"/>
 
-                            <div class="list" v-if="matinfo">
+                            <div class="list " v-if="matinfo">
                                 <ul>
                                     <li>
                                         <span>أ : A </span>

@@ -103,6 +103,23 @@
             <x-heroicon-o-chevron-up class="icon"/>
         </div>
 
+        <script>
+            window.onscroll = function() {
+                let mybutton = document.getElementById('to-top')
+
+                if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                    mybutton.style.display = 'flex';
+                } else {
+                    mybutton.style.display = 'none';
+                }
+            };
+
+            document.getElementById('to-top').addEventListener('click', (e) => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            })
+        </script>
+
         <script src="/js/app.js" defer></script>
         @livewireScripts
         @bukScripts(true)

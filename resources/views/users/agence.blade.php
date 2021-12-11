@@ -3,18 +3,18 @@
     @section('title', $agence->name)
     @section('keywords', $keywords)
     @section('description', $description)
-    @section('og-image', $agence->user()->get()[0]->profile_photo_url)
+    @section('og-image', $agence->user->profile_photo_url)
 
     <div class="vp_content">
 
         <div class="header">
             <div class="agence">
                 <div class="img">
-                    <img src="{{$agence->user()->get()[0]->profile_photo_url}}" alt="{{$agence->name}} {{$agence->city()->get()[0]->city}} {{$agence->city()->get()[0]->secteur}}">
+                    <img src="{{$agence->user->profile_photo_url}}" alt="{{$agence->name}} {{$agence->city->city}} {{$agence->city->secteur}}">
                 </div>
                 <div class="data">
                     <span class="labels color-black weight-700">{{ucfirst($agence->name)}}</span>
-                    <span class="labels color-black">{{$agence->city()->get()[0]->city}} {{$agence->city()->get()[0]->secteur}}</span>
+                    <span class="labels color-black">{{$agence->city->city}} {{$agence->city->secteur}}</span>
                 </div>
             </div>
             <a id="close" href="#null" onclick="javascript:history.back();">
@@ -27,8 +27,8 @@
         <div class="main">
             <div class="side">
                 <a class="labels text-decoration-none" href="tel:{{$agence->tel}}"><strong>Téléphone: </strong>{{$agence->tel}}</a>
-                <a class="labels text-decoration-none" href="email:{{$agence->user()->get('email')[0]->email}}"><strong>Email: </strong>{{$agence->user()->get('email')[0]->email}}</a>
-                <a class="labels text-decoration-none"><strong>Ville: </strong>{{$agence->city()->get()[0]->city}} - {{$agence->city()->get()[0]->secteur}}</a>
+                <a class="labels text-decoration-none" href="email:{{$agence->user->email}}"><strong>Email: </strong>{{$agence->user->email}}</a>
+                <a class="labels text-decoration-none"><strong>Ville: </strong>{{$agence->city->city}} - {{$agence->city->secteur}}</a>
                 <div id="user-map">
                     <adm-user-map id="map" :lat="{{json_decode($agence->map_locale)->lat}}" :lng="{{json_decode($agence->map_locale)->long}}"></adm-user-map>
                 </div>
@@ -37,24 +37,24 @@
             <div class="cars">
                 <div class="row row-side vehicules bgc-white-lighter">
     
-                    @foreach ($agence->vehicules()->getEager() as $car)
+                    @foreach ($agence->vehicules as $car)
                 
                         <div align="center">
                             
-                            <div class="car-card bgc-white"  onclick="window.open('/vehicule/' + {{$car->id}}, '_self')">
+                            <a href="{{route('vehicule', $car->slug)}}" class="car-card bgc-white">
                 
                                 <div class="cc-name" align="left">
-                                    <span class="card-name color-black">{{ucfirst($car->marque()->getEager()[0]->marque . " " . $car->marque()->getEager()[0]->gamme)}}</span>
+                                    <span class="card-name color-black">{{ucfirst($car->marque->marque . " " . $car->marque->gamme)}}</span>
                                 </div>
                             
                                 <div class="cc-img">
-                                    <img src="{{$car->pics()->where('is_thumbnail', true)->get()[0]->image_path}}" alt="{{$car->marque()->getEager()[0]->marque . " " . $car->marque()->getEager()[0]->gamme}}">
+                                    <img src="{{$car->pics()->where('is_thumbnail', true)->get()[0]->image_path}}" alt="{{$car->marque->marque . " " . $car->marque->gamme}}">
                                 </div>
                             
                                 <div class="cc-footer">
                             
                                     <div class="cc-city">
-                                        <span class="card-city color-black">{{ucfirst($agence->city()->get()[0]->city)}} - {{ucfirst($agence->city()->get()[0]->secteur)}}</span>
+                                        <span class="card-city color-black">{{ucfirst($agence->city->city)}} - {{ucfirst($agence->city->secteur)}}</span>
                                     </div>
                             
                                     <div class="cc-price">
@@ -62,14 +62,14 @@
                                     </div>
                             
                                 </div>
-                            </div>
+                            </a>
                         </div>
                 
                     @endforeach
                 
                 </div>
 
-                @if (count($agence->vehicules()->getEager()) == 0)
+                @if (count($agence->vehicules) == 0)
                     <div class="no-result text-center w-100">
                         <span class="h1">Désolé, Il n'y a pas encore des véhicules dans cette agence!</span>
                     </div>

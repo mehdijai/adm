@@ -32,6 +32,7 @@ class Vehicule extends Model
         'options',
         'score',
         'vip',
+        'slug',
     ];
 
     public function agence(): BelongsTo

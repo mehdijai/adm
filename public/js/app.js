@@ -2342,21 +2342,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
 
-window.onscroll = function () {
-  var mybutton = document.getElementById('to-top');
-
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    mybutton.style.display = 'flex';
-  } else {
-    mybutton.style.display = 'none';
-  }
-};
-
-document.getElementById('to-top').addEventListener('click', function (e) {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
-
 if (process.env.MIX_ENV_MODE === 'production') {
   Vue.config.devtools = false;
   Vue.config.debug = false;

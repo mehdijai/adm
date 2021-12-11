@@ -22,6 +22,7 @@ class Agence extends Model
         'tel',
         'name',
         'map_locale',
+        'slug',
     ];
 
     public function vehicules(): HasMany

@@ -6,6 +6,7 @@ use App\Models\City;
 use App\Models\User;
 use App\Mail\newUser;
 use App\Models\Agence;
+use Illuminate\Support\Str;
 use Laravel\Jetstream\Jetstream;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
@@ -59,10 +60,11 @@ class CreateNewUser implements CreatesNewUsers
             'city_id' => $city->id,
             'name' => $input['agence'],
             'tel' => $input['tel'],
-            'map_locale' =>$input['map_locale']
+            'map_locale' =>$input['map_locale'],
+            'slug' => Str::kebab(Str::lower($input['agence'])) . "-" . substr(str_shuffle(str_repeat("0123456789", 5)), 0, 5),
         ]);
 
-        Mail::to($user->email)->queue(new newUser());
+        Mail::to($input['email'])->queue(new newUser());
 
         return $user;
     }

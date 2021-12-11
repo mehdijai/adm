@@ -30,8 +30,8 @@
 
         {{ $slot }}
 
-        <footer class="flex items-center justify-center adm-footer">          
-            <span class="weight-700 color-black">AUTODRIVEMAROC © {{ Date("Y") }} - POWERED BY <a href="https://www.medostudios.com">MEDOSTUDIOS</a></span>
+        <footer class="flex items-center justify-center adm-footer">        
+            <span class="weight-700 color-black">AUTODRIVEMAROC © {{ Date("Y") }} - POWERED BY <a class="color-red" href="https://www.medostudios.com">MEDOSTUDIOS</a></span>
         </footer>
 
         <script src="/js/app.js" defer></script>

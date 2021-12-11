@@ -7,6 +7,7 @@ use App\Models\Agence;
 use App\Models\Marque;
 use App\Models\Setting;
 use App\Models\Vehicule;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
@@ -60,6 +61,9 @@ class VehsController extends Controller
 
         $agence = Auth::user()->agence()->getEager()[0];        
 
+        $pre = Str::lower( str_replace(['(', ')', '/', '|'], " ",  $marque->marque . "-" . $marque->gamme . "-" . $agence->name));
+        $slug = Str::kebab($pre . "-" . substr(str_shuffle(str_repeat("0123456789", 5)), 0, 5));
+
         $vehicule = Vehicule::create([
             'agence_id' => $agence->id,
             'marque_id' => $marque->id,
@@ -72,6 +76,7 @@ class VehsController extends Controller
             'description' => $req->desc,
             'options' => $req->options,
             'score' => 0,
+            'slug' => $slug,
             'vip' => false,
         ]);
 
@@ -229,6 +234,7 @@ class VehsController extends Controller
             'VehiculeClass' => $vehicule->type,
             'prix' => $vehicule->prix,
             'assurance' => $vehicule->assurance,
+            'matricule' => $vehicule->matricule,
             'carb' => $vehicule->carb,
             'bdv' => $vehicule->boite_de_vitesse,
             'desc' => $vehicule->description,

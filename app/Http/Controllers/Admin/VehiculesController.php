@@ -247,6 +247,9 @@ class VehiculesController extends Controller
 
         $agence = $user->agence()->getEager()[0];        
 
+        $pre = Str::lower( str_replace(['(', ')', '/', '|'], " ",  $marque->marque . "-" . $marque->gamme . "-" . $agence->name));
+        $slug = Str::kebab($pre . "-" . substr(str_shuffle(str_repeat("0123456789", 5)), 0, 5));
+        
         $vehicule = Vehicule::create([
             'agence_id' => $agence->id,
             'marque_id' => $marque->id,
@@ -259,6 +262,7 @@ class VehiculesController extends Controller
             'description' => $req->desc,
             'options' => $req->options,
             'score' => 0,
+            'slug' => $slug,
             'vip' => false,
         ]);
 
