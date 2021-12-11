@@ -26,14 +26,26 @@ class MarquesController extends Controller
         return view('admins.marques.index', compact('marques'));
     }
 
-    public function edit($id)
-    {
-        
-    }
-
     public function update(Request $request)
     {
-        
+        $request->validate([
+            'marque_id' => ['required', 'exists:App\Models\Marque,id', 'numeric'],
+            'marque' => ['required', 'string'],
+            'gamme' => ['required', 'string'],
+        ]);
+
+        try{
+            
+            $marque = Marque::findOrFail($request->marque_id)->update([
+                'marque' => $request->marque,
+                'gamme' => $request->gamme,
+            ]);
+
+        }catch (\Exception $exception){
+            Log::error($exception->getMessage());
+        }
+
+        return redirect()->route('admin.marques.index');
     }
 
     public function delete(Request $request)

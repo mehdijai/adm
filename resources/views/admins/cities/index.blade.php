@@ -35,7 +35,7 @@
         <x-jet-validation-errors class="error-status" />
 
         <div class="table-list">
-            <table class="content">
+            <table class="content" x-data="xcities()">
                 <thead>
                     <td>ID</td>
                     <td>Ville</td>
@@ -45,14 +45,26 @@
                 </thead>
                 @if($cities->isNotEmpty())
                     @foreach ($cities as $city)
-                    <tr>
+                    <tr x-show="row == {{$city->id}}">
+                        <td colspan="5">
+                            <form x-show="row == {{$city->id}}" x-ref="update_city_{{$city->id}}" action="{{route('admin.cities.update')}}" method="post" onsubmit="return confirm('Are you sure you want to update this city?');">
+                                @csrf
+                                <input type="hidden" name="city_id" value="{{$city->id}}">
+                                <input type="text" value="{{$city->city}}" name="city">
+                                <input type="text" value="{{$city->secteur}}" name="secteur">
+                                <span @click="save({{$city->id}})" class="btn bgc-success color-white">Save</span>
+                                <span @click="row = null" class="btn bgc-info color-white">Cancel</span>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr x-show="row != {{$city->id}}">
                         <td>{{$city->id}}</td>
                         <td><a href="{{route('admin.users.index') . '?search=' . $city->city}}"><strong>{{$city->city}}</strong></a></td>
                         <td><a href="{{route('admin.users.index') . '?search=' . $city->secteur}}"><strong>{{$city->secteur}}</strong></a></td>
                         <td>{{count($city->agences)}}</td>
                         <td class="x-actions">
                             
-                            <a href="{{route('admin.cities.edit', ['id' => $city->id])}}"><x-heroicon-s-pencil class="icon color-info" /></a>
+                            <a @click="row = {{$city->id}}"><x-heroicon-s-pencil class="icon color-info" /></a>
                             @if (count($city->agences) == 0)
                             <form method="POST" class="mx-2" action="{{route('admin.cities.delete')}}" onsubmit="return confirm('Are you sure you want to delete this city?');">
                                 @csrf
@@ -78,5 +90,16 @@
         </div>
     </div>
 
-</x-app-layout>
+    <script>
+        function xcities(){
+            return {
+                row: null,
+                save($id){
+                    this.$refs['update_city_' + $id].submit()
+                    this.row = null
+                }
+            }
+        }
+    </script>
 
+</x-app-layout>

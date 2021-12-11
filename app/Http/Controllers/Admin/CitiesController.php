@@ -25,14 +25,26 @@ class CitiesController extends Controller
         return view('admins.cities.index', compact('cities'));
     }
 
-    public function edit($id)
-    {
-        
-    }
-
     public function update(Request $request)
     {
-        
+        $request->validate([
+            'city_id' => ['required', 'exists:App\Models\City,id', 'numeric'],
+            'city' => ['required', 'string'],
+            'secteur' => ['required', 'string'],
+        ]);
+
+        try{
+            
+            $city = City::findOrFail($request->city_id)->update([
+                'city' => $request->city,
+                'secteur' => $request->secteur,
+            ]);
+
+        }catch (\Exception $exception){
+            Log::error($exception->getMessage());
+        }
+
+        return redirect()->route('admin.cities.index');
     }
 
     public function delete(Request $request)

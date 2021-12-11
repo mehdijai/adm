@@ -191,7 +191,6 @@ Route::middleware(['auth:sanctum', 'verified', 'role:admin'])->prefix('admin')->
 
         Route::get('/', [CitiesController::class, 'index'])->name('index');
         Route::post('/delete', [CitiesController::class, 'delete'])->name('delete');
-        Route::get('/edit/{id}', [CitiesController::class, 'edit'])->name('edit');
         Route::post('/update', [CitiesController::class, 'update'])->name('update');
         Route::post('/clean', [CitiesController::class, 'clean'])->name('clean');
         
@@ -201,7 +200,6 @@ Route::middleware(['auth:sanctum', 'verified', 'role:admin'])->prefix('admin')->
 
         Route::get('/', [MarquesController::class, 'index'])->name('index');
         Route::post('/delete', [MarquesController::class, 'delete'])->name('delete');
-        Route::get('/edit/{id}', [MarquesController::class, 'edit'])->name('edit');
         Route::post('/update', [MarquesController::class, 'update'])->name('update');
         Route::post('/clean', [MarquesController::class, 'clean'])->name('clean');
         

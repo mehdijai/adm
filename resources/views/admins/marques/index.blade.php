@@ -35,7 +35,7 @@
         <x-jet-validation-errors class="error-status" />
 
         <div class="table-list">
-            <table class="content">
+            <table class="content" x-data="xmarques()">
                 <thead>
                     <td>ID</td>
                     <td>Marque</td>
@@ -45,14 +45,26 @@
                 </thead>
                 @if($marques->isNotEmpty())
                     @foreach ($marques as $marque)
-                    <tr>
+                    <tr x-show="row == {{$marque->id}}">
+                        <td colspan="5">
+                            <form x-show="row == {{$marque->id}}" x-ref="update_marque_{{$marque->id}}" action="{{route('admin.marques.update')}}" method="post" onsubmit="return confirm('Are you sure you want to update this marque?');">
+                                @csrf
+                                <input type="hidden" name="marque_id" value="{{$marque->id}}">
+                                <input type="text" value="{{$marque->marque}}" name="marque">
+                                <input type="text" value="{{$marque->gamme}}" name="gamme">
+                                <span @click="save({{$marque->id}})" class="btn bgc-success color-white">Save</span>
+                                <span @click="row = null" class="btn bgc-info color-white">Cancel</span>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr x-show="row != {{$marque->id}}">
                         <td>{{$marque->id}}</td>
                         <td><a href="{{route('admin.vehicules.index') . '?search=' . $marque->marque}}"><strong>{{$marque->marque}}</strong></a></td>
                         <td><a href="{{route('admin.vehicules.index') . '?search=' . $marque->gamme}}"><strong>{{$marque->gamme}}</strong></a></td>
                         <td>{{count($marque->vehicules)}}</td>
                         <td class="x-actions">
                             
-                            <a href="{{route('admin.marques.edit', ['id' => $marque->id])}}"><x-heroicon-s-pencil class="icon color-info" /></a>
+                            <a @click="row = {{$marque->id}}"><x-heroicon-s-pencil class="icon color-info" /></a>
                             @if (count($marque->vehicules) == 0)
                             <form method="POST" class="mx-2" action="{{route('admin.marques.delete')}}" onsubmit="return confirm('Are you sure you want to delete this marque?');">
                                 @csrf
@@ -77,6 +89,18 @@
             {{$marques->links()}}
         </div>
     </div>
+
+    <script>
+        function xmarques(){
+            return {
+                row: null,
+                save($id){
+                    this.$refs['update_marque_' + $id].submit()
+                    this.row = null
+                }
+            }
+        }
+    </script>
 
 </x-app-layout>
 
