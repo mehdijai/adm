@@ -69,6 +69,13 @@ class VehiculesController extends Controller
     public static function update(Request $request)
     {
         $veh = Vehicule::find($request->id);
+
+        $duplicated = Vehicule::where('matricule', str_replace([' ', ':', '/', '|'], '_', $request->matricule))->count();
+
+        if($duplicated > 0){
+            return response()->json(['error' => 'Cette matricule déjà existe dans notre base de donnée! Merci de le vérifier, ou contactez-nous si le problème reste présent.'], 200);
+        }
+
         $marque = $veh->marque()->getEager()[0];
 
         if($marque->marque != $request->marque || $marque->gamme != $request->gamme){
@@ -99,6 +106,9 @@ class VehiculesController extends Controller
         }
         if($veh->options != $request->options){
             $veh->options = $request->options;
+        }
+        if($veh->matricule != $request->matricule){
+            $veh->matricule = str_replace([' ', ':', '/', '|'], '_', $request->matricule);
         }
 
         if($request->deleted_images){
@@ -156,6 +166,7 @@ class VehiculesController extends Controller
         $this->setup_vars();
 
         $vehicule = Vehicule::findOrFail($id);
+
         $marque = $vehicule->marque()->getEager()[0];
         $agence = $vehicule->agence()->getEager()[0]; 
         
@@ -221,7 +232,7 @@ class VehiculesController extends Controller
 
     public function store(Request $req)
     {
-        $duplicated = Vehicule::where('matricule', str_replace(' ', '_', $req->matricule))->count();
+        $duplicated = Vehicule::where('matricule', str_replace([' ', ':', '/', '|'], '_', $req->matricule))->count();
 
         if($duplicated > 0){
             return response()->json(['error' => 'Cette matricule déjà existe dans notre base de donnée! Merci de le vérifier, ou contactez-nous si le problème reste présent.'], 200);
@@ -240,7 +251,7 @@ class VehiculesController extends Controller
             'agence_id' => $agence->id,
             'marque_id' => $marque->id,
             'type' => $req->VehiculeClass,
-            'matricule' => str_replace(' ', '_', $req->matricule),
+            'matricule' => str_replace([' ', ':', '/', '|'], '_', $req->matricule),
             'prix' => $req->prix,
             'assurance' => $req->assurance,
             'carb' => $req->carb,

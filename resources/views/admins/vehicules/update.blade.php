@@ -79,7 +79,7 @@
                         
                     </div>
 
-                    <span class="bgc-white-full inputTxt">{{$matricule}}</span>
+                    <x-jet-input id="matricule" placeholder="exemple: 15 B 26560" type="text" name="matricule" value="{{$matricule}}" required autocomplete="off" />
                 </div>
 
                 <div class="filter-inputs">
@@ -211,7 +211,7 @@
 
                     <div class="btnCnt">
                         <x-jet-button id="submit-create" type="button" @click="submitform" class="buttonTxt">Modifier la véhicule</x-jet-button>
-                        <x-jet-secondary-button type="button" class="buttonTxt" onclick="window.open('{{route('dashboard')}}', '_self')">Anuuler</x-jet-secondary-button>
+                        <x-jet-secondary-button type="button" class="buttonTxt"><a href="{{url()->previous()}}">Annuler</a></x-jet-secondary-button>
                     </div>
                     
                 </div>

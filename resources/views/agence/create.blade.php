@@ -205,7 +205,7 @@
 
                     <div class="btnCnt">
                         <x-jet-button id="submit-create" type="button" @click="submitform" class="buttonTxt">Ajouter la véhicule</x-jet-button>
-                        <x-jet-secondary-button type="button" class="buttonTxt" onclick="window.open('{{route('dashboard')}}', '_self')">Anuuler</x-jet-secondary-button>
+                        <x-jet-secondary-button type="button" class="buttonTxt"><a href="{{url()->previous()}}">Annuler</a></x-jet-secondary-button>
                     </div>
                     
                 </div>

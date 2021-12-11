@@ -47,7 +47,7 @@ class VehsController extends Controller
 
     public function store(Request $req)
     {
-        $duplicated = Vehicule::where('matricule', str_replace(' ', '_', $req->matricule))->count();
+        $duplicated = Vehicule::where('matricule', str_replace([' ', ':', '/', '|'], '_', $req->matricule))->count();
 
         if($duplicated > 0){
             return response()->json(['error' => 'Cette matricule déjà existe dans notre base de donnée! Merci de le vérifier, ou contactez-nous si le problème reste présent.'], 200);
@@ -64,7 +64,7 @@ class VehsController extends Controller
             'agence_id' => $agence->id,
             'marque_id' => $marque->id,
             'type' => $req->VehiculeClass,
-            'matricule' => str_replace(' ', '_', $req->matricule),
+            'matricule' => str_replace([' ', ':', '/', '|'], '_', $req->matricule),
             'prix' => $req->prix,
             'assurance' => $req->assurance,
             'carb' => $req->carb,
@@ -227,7 +227,6 @@ class VehsController extends Controller
             'marque' => $marque->marque,
             'gamme' => $marque->gamme,
             'VehiculeClass' => $vehicule->type,
-            'matricule' => str_replace('_', ' ', $vehicule->matricule),
             'prix' => $vehicule->prix,
             'assurance' => $vehicule->assurance,
             'carb' => $vehicule->carb,
