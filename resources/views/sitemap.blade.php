@@ -59,10 +59,6 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://www.medostudios.com</loc>
-        <lastmod>{{ Carbon\Carbon::parse('11/12/2021 20:47:00')->tz('UTC')->toAtomString() }}</lastmod>
-    </url>
-    <url>
         <loc>https://pres.autodrive.ma</loc>
         <lastmod>{{ Carbon\Carbon::parse('11/12/2021 20:47:00')->tz('UTC')->toAtomString() }}</lastmod>
     </url>
