@@ -43,27 +43,6 @@ use App\Http\Controllers\Admin\SubscriptionsController;
 |
 */
 
-Route::get('/slug', function(){
-
-    // $agences = Agence::where('slug', null)->select('slug', 'name', 'id')->get();
-
-    // foreach ($agences as $agence) {
-    //     $ag = Agence::find($agence->id);
-    //     $ag->slug = Str::kebab(Str::lower($agence->name)) . "-" . substr(str_shuffle(str_repeat("0123456789", 5)), 0, 5);
-    //     $ag->save();
-    // }
-    // $vehicules = Vehicule::where('slug', null)->with('agence', 'marque')->get();
-
-    // foreach ($vehicules as $vehicule) {
-    //     $veh = Vehicule::find($vehicule->id);
-    //     $pre = Str::lower( str_replace(['(', ')', '/', '|'], " ",  $vehicule->marque->marque . "-" . $vehicule->marque->gamme . "-" . $vehicule->agence->name));
-    //     $slug = Str::kebab($pre . "-" . substr(str_shuffle(str_repeat("0123456789", 5)), 0, 5));
-    //     $veh->slug = $slug;
-    //     $veh->save();
-    // }
-
-});
-
 Route::get('/', [HomeController::class, 'index'])->name("home");
 
 Route::get('/sitemap.xml' , [SitemapXmlController::class, 'index'])->name('sitemap');
