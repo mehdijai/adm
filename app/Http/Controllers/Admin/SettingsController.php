@@ -12,9 +12,12 @@ class SettingsController extends Controller
 
     public function index()
     {
-        $settings = Setting::where('name', '!=', 'provider')->where('name', '!=', 'contact')->get();
+        $settings = Setting::where('name', '!=', 'provider')->where('name', '!=', 'contact')->where('name', '!=', 'tags')->get();
         $settings_list = new Setting();
-        return view('admins.settings.index')->with(['settings' => $settings, 'settings_list' => $settings_list]);
+        $tags = Setting::where('name', 'tags')->first();
+        $tags = $tags->data;
+
+        return view('admins.settings.index', compact('tags', 'settings', 'settings_list'));
     }
     public function update(Request $request)
     {
@@ -72,5 +75,12 @@ class SettingsController extends Controller
 
         return redirect()->route('admin.settings.index');
         
+    }
+
+    public function tags_update(Request $request)
+    {
+        Setting::where('name', 'tags')->update(['data' => $request->tags]);
+
+        return redirect()->route('admin.settings.index');
     }
 }

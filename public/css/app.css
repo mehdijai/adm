@@ -7424,7 +7424,7 @@ button.bg-dark:focus {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.shadow, .admin-layout .settings-container .settings .parameter, .admin-layout .table-list .content {
+.shadow, .admin-layout .settings-container .settings .parameter, .admin-layout .settings-container .tags .parameter, .admin-layout .table-list .content {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -10702,6 +10702,61 @@ h3 {
 .admin-layout .settings-container .list .content td div .icon {
   margin: 0 !important;
 }
+.admin-layout .settings-container .tags {
+  width: 100%;
+  padding: 40px;
+}
+.admin-layout .settings-container .tags .parameter {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.admin-layout .settings-container .tags .parameter .display .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-layout .settings-container .tags .parameter .display .header .icon {
+  cursor: pointer;
+}
+.admin-layout .settings-container .tags .parameter .display .data {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  align-items: center;
+}
+.admin-layout .settings-container .tags .parameter .display .data code {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1F1F1F;
+  color: #d8d6d6;
+}
+.admin-layout .settings-container .tags .parameter .edit .header {
+  display: flex;
+  align-items: center;
+}
+.admin-layout .settings-container .tags .parameter .edit .header .title {
+  margin-right: auto;
+}
+.admin-layout .settings-container .tags .parameter .edit .header .btn {
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0 2px;
+}
+.admin-layout .settings-container .tags .parameter .edit form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin-layout .settings-container .tags .parameter .edit form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
 .admin-layout .settings-container .settings {
   width: 100%;
   padding: 40px;
@@ -10989,7 +11044,7 @@ button {
   cursor: pointer;
 }
 
-.shadow, .admin-layout .table-list .content, .admin-layout .settings-container .settings .parameter {
+.shadow, .admin-layout .table-list .content, .admin-layout .settings-container .tags .parameter, .admin-layout .settings-container .settings .parameter {
   box-shadow: 0 2px 8px rgba(10, 10, 10, 0.1);
 }
 

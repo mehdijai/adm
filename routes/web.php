@@ -227,6 +227,7 @@ Route::middleware(['auth:sanctum', 'verified', 'role:admin'])->prefix('admin')->
         Route::post('/update', [SettingsController::class, 'update'])->name('update');
         Route::post('/contacts', [SettingsController::class, 'contacts_update'])->name('contacts');
         Route::post('/provider', [SettingsController::class, 'provider_update'])->name('providers');
+        Route::post('/tags', [SettingsController::class, 'tags_update'])->name('tags');
 
     });
 

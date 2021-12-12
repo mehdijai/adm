@@ -60,5 +60,12 @@ class Setting extends Model
 
         return $data;
     }
+
+    public static function externalTags()
+    {
+        $tags = Setting::where('name', 'tags')->first();
+
+        return $tags->data;
+    }
     
 }

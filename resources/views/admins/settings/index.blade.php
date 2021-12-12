@@ -86,76 +86,108 @@
                         @endwhile
                 </table>
             </div>
-        
-            <div class="settings">
-                @foreach ($settings as $set)
-                
-                <div class="parameter" id="param-type" x-data="{edit: null,ctype: '', types: {{ $set->data }},
-                    addToTypes(){
-                        if(this.ctype != ''){
-                            this.types.push(this.ctype)
-                            this.ctype = ''
-                            document.getElementById('{{$set->name}}-json').value = JSON.stringify(this.types)
-                        }
 
-                    },
-                    deleteType(type){
-                        if(this.type != ''){
-                            let index = this.types.indexOf(type)
-                            if (index > -1) {
-                                this.types.splice(index, 1);
-                            }
-                            document.getElementById('{{$set->name}}-json').value = JSON.stringify(this.types)
-                        }
-                    },
-                    submitForm(){
-                        document.getElementById('{{$set->name}}-form').submit();
-                    },
-                }">
-                    <div x-show="edit!='type'" class="display">
-                        <div class="header">
-                            <span class="title color-red">{{$set->name}}</span>
-                            <x-heroicon-s-pencil-alt class="icon color-info" @click="edit = 'type'" />
+            <div>
+
+                <div class="tags" x-data="{mod: false}">
+                    <div class="parameter">
+                        <div x-show="!mod" class="display">
+                            <div class="header">
+                                <span class="title color-red">External tags</span>
+                                <x-heroicon-s-pencil-alt class="icon color-info" @click="mod = true" />
+                            </div>
+                            <div class="data">
+                                <code>{{$tags}}</code>
+                            </div>
                         </div>
-                        <div class="data">
-                            <template x-for="type in types">
-                                <span class="item"> <span x-text="type"></span></span>
-                            </template>
+
+                        <div x-show="mod" class="edit">
+
+                            <div class="header">
+                                <span class="title color-red">External tags</span>
+                                <x-heroicon-o-x class="icon color-info" @click="mod = false" />
+                            </div>
+                            <form method="POST" action="{{route('admin.settings.tags')}}">
+                                @csrf
+                                <textarea name="tags" rows="10" required autofocus>{{$tags}}</textarea>
+                                <button type="submit" class="btn bgc-success color-white-lighter weight-600">Save</button>
+                            </form>
+                            
                         </div>
                     </div>
-                    <div x-show="edit=='type'" class="edit">
+                </div>
+                    
+                <div class="settings">
 
-                        <form method="POST" action="{{route('admin.settings.update')}}" id="{{$set->name}}-form">
-                            @csrf
-                            <input type="hidden" name="name" value="{{$set->name}}">
-                            <input type="hidden" id="{{$set->name}}-json" name="data" value="{{ $set->data }}">
-                        </form>
+                    @foreach ($settings as $set)
+                    
+                    <div class="parameter" id="param-type" x-data="{edit: null,ctype: '', types: {{ $set->data }},
+                        addToTypes(){
+                            if(this.ctype != ''){
+                                this.types.push(this.ctype)
+                                this.ctype = ''
+                                document.getElementById('{{$set->name}}-json').value = JSON.stringify(this.types)
+                            }
 
-                        <div class="header">
-                            <span class="title color-red">{{$set->name}}</span>
-                            <span @click="submitForm()" class="btn bgc-success color-white">Save</span>
-                            <span @click="edit = null" class="btn bgc-info color-white">Cancel</span>
-                        </div>
-                        <div class="form">
-                            <x-jet-label class="labels wight-500 color-blue" for="settings-type" value="{{ __('Add a new one') }}" />
-                            <div class="flex">
-                                <x-jet-input x-model="ctype" id="inp" placeholder="Add new type" id="settings-type" type="text" name="settings-type" required autofocus autocomplete="off" />
-                                <span @click="addToTypes" id="add-type">Add <x-heroicon-s-plus class="icon ml-1"/></span>
+                        },
+                        deleteType(type){
+                            if(this.type != ''){
+                                let index = this.types.indexOf(type)
+                                if (index > -1) {
+                                    this.types.splice(index, 1);
+                                }
+                                document.getElementById('{{$set->name}}-json').value = JSON.stringify(this.types)
+                            }
+                        },
+                        submitForm(){
+                            document.getElementById('{{$set->name}}-form').submit();
+                        },
+                    }">
+                        <div x-show="edit!='type'" class="display">
+                            <div class="header">
+                                <span class="title color-red">{{$set->name}}</span>
+                                <x-heroicon-s-pencil-alt class="icon color-info" @click="edit = 'type'" />
                             </div>
                             <div class="data">
                                 <template x-for="type in types">
-                                    <span class="item"> <span x-text="type"></span> <x-heroicon-s-x-circle @click="deleteType(type)" class="icon ml-1 color-danger hover"/> </span>
+                                    <span class="item"> <span x-text="type"></span></span>
                                 </template>
                             </div>
                         </div>
+                        <div x-show="edit=='type'" class="edit">
+
+                            <form method="POST" action="{{route('admin.settings.update')}}" id="{{$set->name}}-form">
+                                @csrf
+                                <input type="hidden" name="name" value="{{$set->name}}">
+                                <input type="hidden" id="{{$set->name}}-json" name="data" value="{{ $set->data }}">
+                            </form>
+
+                            <div class="header">
+                                <span class="title color-red">{{$set->name}}</span>
+                                <span @click="submitForm()" class="btn bgc-success color-white">Save</span>
+                                <span @click="edit = null" class="btn bgc-info color-white">Cancel</span>
+                            </div>
+                            <div class="form">
+                                <x-jet-label class="labels wight-500 color-blue" for="settings-type" value="{{ __('Add a new one') }}" />
+                                <div class="flex">
+                                    <x-jet-input x-model="ctype" id="inp" placeholder="Add new type" id="settings-type" type="text" name="settings-type" required autofocus autocomplete="off" />
+                                    <span @click="addToTypes" id="add-type">Add <x-heroicon-s-plus class="icon ml-1"/></span>
+                                </div>
+                                <div class="data">
+                                    <template x-for="type in types">
+                                        <span class="item"> <span x-text="type"></span> <x-heroicon-s-x-circle @click="deleteType(type)" class="icon ml-1 color-danger hover"/> </span>
+                                    </template>
+                                </div>
+                            </div>
+                            
+                        </div>
                         
                     </div>
-                    
+                    @endforeach
                 </div>
-                @endforeach
+
             </div>
         </div>
         
     </div>
-
 </x-app-layout>
