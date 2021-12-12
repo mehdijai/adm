@@ -10936,11 +10936,38 @@ html {
   flex-direction: column;
   align-content: center;
 }
+.adm-footer div section h5 {
+  font-size: 1rem !important;
+}
+.adm-footer div section a {
+  font-size: 0.9rem !important;
+}
 .adm-footer div section.cp {
   margin-top: 1.5rem;
 }
+.adm-footer div section.cp span, .adm-footer div section.cp a {
+  text-align: center;
+  font-size: 0.9rem !important;
+}
 .adm-footer div section * {
   margin: 0.2rem auto !important;
+}
+@media screen and (max-width: 768px) {
+  .adm-footer div {
+    flex-direction: column;
+  }
+  .adm-footer div section {
+    margin: 1rem 0 !important;
+  }
+  .adm-footer div section.cp {
+    margin: 0 !important;
+  }
+  .adm-footer div section.cp span, .adm-footer div section.cp a {
+    font-size: 0.7rem !important;
+  }
+  .adm-footer div section * {
+    margin: 0.1rem auto !important;
+  }
 }
 
 a {
@@ -11071,6 +11098,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row !important;
 }
 .smlinks .sm {
   padding: 8px 10px;

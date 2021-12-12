@@ -64,12 +64,43 @@ html {
             flex-direction: column;
             align-content: center;
 
+            h5{
+                font-size: 1rem !important;
+            }
+
+            a{
+                font-size: 0.9rem !important;
+            }
+
             &.cp{
                 margin-top: 1.5rem;
+                span, a{
+                    text-align: center;
+                    font-size: 0.9rem !important;
+                }
             }
 
             *{
                 margin: 0.2rem auto !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+
+            section{
+                margin: 1rem 0 !important;
+    
+                &.cp{
+                    margin: 0 !important;
+                    span, a{
+                        font-size: 0.7rem !important;
+                    }
+                }
+    
+                *{
+                    margin: 0.1rem auto !important;
+                }
             }
         }
     }
@@ -219,7 +250,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: row !important;
     .sm{
         padding: 8px 10px;
         margin: 5px 10px;
