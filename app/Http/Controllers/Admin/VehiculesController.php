@@ -8,6 +8,7 @@ use App\Models\Marque;
 use App\Models\Setting;
 use App\Models\Vehicule;
 use App\QueryFilters\Sort;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Pipeline\Pipeline;
 use Illuminate\Support\Facades\Log;
