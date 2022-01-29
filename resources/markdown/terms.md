@@ -1,35 +1,89 @@
 # Termes et conditions
 
-Ces termes et conditions, ainsi que notre avis de confidentialité et notre déclaration de cookies,constituent notre accord avec vous, pour les services que nous fournissons en organisant la fourniture de location de voiture. Pour éviter tout doute, «vous» désigne le conducteur principal, la personne qui paie la location et / ou la personne qui fait la réservation. Veuillez noter que, bien que «vous» puisse désigner plusieurs personnes, nous contractons avec toutes les parties, mais nous ne pourrons parler au chauffeur principal que pour une réservation confirmée. Ensemble, ils sont appelés «nos conditions».
+Bienvenue à Autodrive Maroc !
+Les présentes conditions générales définissent les règles d'utilisation du site Web de Autodrive Maroc, situé à l'adresse www.autodrive.ma.
+En accédant à ce site Web, nous supposons que vous acceptez ces conditions. Ne continuez pas à utiliser Autodrive Maroc si vous n'acceptez pas de prendre toutes les conditions énoncées sur cette page.
+La terminologie suivante s'applique aux présentes conditions générales, à la déclaration de confidentialité et à l'avis de non-responsabilité ainsi qu'à tous les accords : "Client", "Vous" et "Votre" font référence à vous, la personne qui se connecte à ce site Web et qui se conforme aux conditions générales de la Société. "La Société", "Nous", "Notre", "Nos" et "Nous", désigne notre Société. "Partie", "Parties", ou "Nous", désigne à la fois le client et nous-mêmes. Tous les termes font référence à l'offre, l'acceptation et la prise en compte du paiement nécessaire pour entreprendre le processus de notre assistance au Client de la manière la plus appropriée dans le but exprès de répondre aux besoins du Client en ce qui concerne la fourniture des services déclarés de la Société. Toute utilisation de la terminologie ci-dessus ou d'autres mots au singulier, au pluriel, en majuscules, et/ou il/elle ou ils/elles, sont considérés comme interchangeables et donc comme se référant au même.
 
-Ces conditions s'appliquent à tous les contrats de fourniture de nos services à l'exclusion de toutes les autres conditions générales. Aucune conduite **autodrive.ma** ne sera considérée comme une acceptation de toute autre condition. L'acceptation des services ou la signature de tout accord sera considérée comme une preuve concluante de votre acceptation de ces conditions. Nous pouvons modifier les conditions de temps à autre et il vous est conseillé de consulter la plateforme pour envisager toute modification des conditions qui s'appliquent à vous. Votre location de voiture est soumise aux conditions générales de location de voiture imposées par la société de location de voitures.
+## Cookies
 
-Nous vous fournirons une voiture directement ou en tant qu'agent. La capacité dans laquelle nous agissons dépend de notre relation avec la société de location de voitures. Ces conditions s'appliquent à toute réservation que vous effectuez avec nous sur ou via ce plateforme, vous devez donc vous assurer que vous êtes au courant de leur contenu. Nos conditions et celles des sociétés de location de voitures avec lesquelles nous travaillons contiennent certaines exclusions et limitations de responsabilité.
+Nous utilisons des cookies. En accédant à Autodrive Maroc, vous acceptez d'utiliser des cookies en accord avec la politique de confidentialité de Autodrive Maroc.
+La plupart des sites web interactifs utilisent des cookies pour nous permettre de récupérer les données de l'utilisateur à chaque visite. Les cookies sont utilisés par notre site Web pour permettre la fonctionnalité de certaines zones afin de faciliter la tâche des personnes qui visitent notre site Web. Certains de nos partenaires affiliés/publicitaires peuvent également utiliser des cookies.
 
-Votre réservation sur cette plateforme est conditionnelle à votre acceptation de nos conditions. Si vous n'êtes pas d'accord avec une partie d'entre eux, vous ne devez pas procéder à votre réservation. En confirmant que vous souhaitez réserver une voiture via cette plateforme, vous indiquez que vous avez lu, compris et accepté nos conditions. S'il y a une partie que vous ne comprenez pas entièrement, ou si vous avez une question concernant la location de voiture ou tout autre produit, veuillez **[nous contacter]('/#contact)**                            
+## Licence
 
-### Exactitude des informations
+Sauf indication contraire, AutoDrive Maroc et / ou ses licenciées possèdent les droits de propriété intellectuelle pour tous les matériaux sur AutoDrive Maroc.Tous les droits de propriété intellectuelle sont réservés.Vous pouvez y accéder à AutoDrive Maroc pour votre propre usage personnel soumis à des restrictions définies dans les présentes conditions générales.
+Il ne faut pas:
 
-Bien que nous nous efforcions d'assurer l'exactitude des informations sur cette plateforme, ni nous ni nos affiliés, fournisseurs ou agents ne pouvons être tenus pour responsables de l'exactitude de ces informations. Il est de votre seule responsabilité d'évaluer l'exactitude, l'exhaustivité et l'utilité de toutes les informations fournies sur cette plateforme.
+-   republier du matériel d'AutoDrive Maroc
+-   vente, loyer ou sous-licence du matériel d'AutoDrive Maroc
+-   reproduire, dupliquer ou copier le matériel d'AutoDrive Maroc
+-   redistribuer le contenu de AutoDrive Maroc
+    Cet accord commence à la date du présent.
+    Vous accordez par la présente AutoDrive Maroc une licence non exclusive à utiliser, reproduire, éditer et autoriser d'autres personnes à utiliser, reproduire et modifier l'un de vos commentaires dans tous les formulaires, formats ou supports.
 
-Nous déclinons toute responsabilité pour les frais occasionnés par la documentation signée et acceptée au comptoir de location de voitures.
+## Usage commercial Products
 
-Nous ne serons pas tenus responsables de toute personne conduisant sous l'influence de l'alcool ou de drogues, causant des dommages intentionnels, conduisant hors route ou conduisant sans soin et attention. Vous accepterez l'entière responsabilité de ces réclamations.
- 
-### Limites d'âge minimum / maximum
+Vous devez utiliser des produits commerciaux étendus sur une utilisation commerciale, des marques de commerce ou des modifier.
+Vous n'avez pas le droit de les résonner.
 
-Dans la plupart des pays, l'âge minimum d'embauche est de 21 ans. Des frais supplémentaires peuvent s'appliquer avec certaines sociétés de location de voitures et dans certains pays pour les conducteurs âgés de moins de 25 ans ou de plus de 65 ans: lorsque l'âge du conducteur correct a été soumis avec la demande de réservation, nous vous informerons de tous les frais probables. L'âge minimum requis pour les voitures plus grandes peut également être plus élevé à certains endroits. Veuillez vérifier auprès de notre centre de contact si vous avez des questions ou des préoccupations à ce sujet.
+## Hyperlinking à notre contenu
 
-### Mise à disposition de voitures
+Les organisations suivantes peuvent créer un lien vers notre site Web sans approbation écrite préalable:
 
-Les sociétés de location de voitures se réservent le droit de refuser une voiture à toute personne jugée inapte à conduire ou ne répondant pas aux critères d'éligibilité. Nous ne serons pas responsables de l'achèvement des préparatifs de voyage.
+-   Organismes gouvernementaux;
+-   Moteurs de recherche;
+-   des organisations de presse;
+-   Les distributeurs de répertoires en ligne peuvent créer un lien vers notre site Web de la même manière qu'elles hyperliens sur les sites Web d'autres entreprises cotées; et
+-   Système de grandes entreprises accréditées, à l'exception de la sollicitation d'organisations à but non lucratif, de centres commerciaux de charité et de groupes de collecte de fonds de charité qui peuvent ne pas hyperlien vers notre site Web.
+    Ces organisations peuvent créer un lien vers notre page d'accueil, des publications ou d'autres informations sur le site Web tant que le lien: (a) n'est en aucune manière trompeuse; (b) n'implique pas faussement le parrainage, l'endossement ou l'approbation de la partie de liaison et de ses produits et / ou services; et (c) convient dans le contexte du site de la partie de liaison.
+    Nous pouvons envisager et approuver d'autres demandes de liaison des types d'organisations suivantes:
+-   sources de consommateurs et / ou d'informations commerciales communément connues;
+-   sites communautaires Dot.com;
+-   associations ou autres groupes représentant des organismes de bienfaisance;
+-   distributeurs de répertoires en ligne;
+-   portails Internet;
+-   entreprises comptables, de droit et de conseil;
+-   établissements d'enseignement et associations professionnelles.
+    Nous approuverions des demandes de liaison de ces organisations si nous décidons que: (a) le lien ne nous ferait pas regarder de manière défavorable à nous-mêmes ou à nos entreprises agréées; (b) l'organisation n'a aucun dossier négatif avec nous; (c) Le bénéfice pour nous de la visibilité de l'hyperlien compense l'absence d'autodrive Maroc et (d) Le lien est dans le contexte des informations générales des ressources.
+    Ces organisations peuvent créer un lien vers notre page d'accueil tant que le lien: (a) n'est en aucune manière trompeuse; (b) n'implique pas faussement le parrainage, l'endossement ou l'approbation de la partie de liaison et de ses produits ou services; et (c) convient dans le contexte du site de la partie de liaison.
+    Si vous êtes l'une des organisations énumérées au paragraphe 2 ci-dessus et que vous êtes intéressé à relier à notre site Web, vous devez nous informer en envoyant un courrier électronique à AutoDrive Maroc. Veuillez inclure votre nom, votre nom d'organisation, vos coordonnées ainsi que l'URL de votre site, une liste des URL à partir de laquelle vous avez l'intention de créer un lien vers notre site Web et une liste des URL sur notre site auquel vous souhaitez que vous souhaitiez. lien. Attendez 2-3 semaines pour une réponse.
 
-### Difficultés mécaniques / accidents
+## Les organisations approuvées peuvent hyperliens vers notre site Web comme suit:
 
-En cas de panne ou de difficultés mécaniques, vous devez appeler immédiatement la société de location de voitures. L'entreprise de location de voitures doit autoriser les réparations ou le remplacement des voitures. Si vous êtes impliqué dans un accident, la police locale et la société de location de voitures doivent être contactées. Conservez des copies de tous les documents pertinents que vous êtes invité à remplir. Cela peut être nécessaire si vous souhaitez faire une réclamation.
+-   en utilisant notre nom d'entreprise;ou
+-   en utilisant le localisateur de ressources uniformes liés à;ou
+-   En utilisant toute autre description de notre site Web étant liée à celle qui a du sens dans le contexte et le format du contenu sur le site de la partie de liaison.
+    Aucune utilisation du logo d'AutoDrive Maroc ou d'autres arts Artwork will be allowed for linking absent a trademark license agreement.
 
-Votre location de voiture est soumise aux conditions générales de location de voiture imposées par la société de location de voitures. Vous serez donc soumis à la fois à nos conditions et à celles de la société de location de voitures. Nous n'acceptons aucune responsabilité et ne serons pas responsables en cas de perte, dommage, altération, retards ou changements résultant de troubles civils, de conflits industriels, y compris les conflits de contrôle du trafic aérien, d'activité terroriste, de catastrophe naturelle ou nucléaire, d'incendie ou de conditions météorologiques défavorables, problèmes techniques inévitables de  ransport, fermeture ou congestion d'aéroports ou de ports de ferry, annulation de vols réguliers ou défaillance financière des compagnies aériennes.
+## iFrames
 
-### Protection des données
+Sans l'approbation préalable et l'autorisation écrite, vous ne pouvez pas créer de cadres autour de nos pages Web qui modifient de quelque manière que ce soit la présentation visuelle ou l'apparence de notre site Web.
 
-Votre vie privée est importante pour nous. En utilisant ce site, vous acceptez les termes de notre avis de confidentialité.
+## Responsabilité du contenu
+
+Nous ne serons tenus responsables de tout contenu qui apparaît sur votre site Web.Vous acceptez de vous protéger et de vous défendre contre toutes les revendications qui augmentent sur votre site Web.Aucun lien ne devrait apparaître sur tout site Web pouvant être interprété comme diffamé, obscène ou criminel, ou qui enfreint, sinon viole ou défend la violation ou toute autre violation des droits tiers.
+
+## Votre vie privée
+
+**[Veuillez lire la politique de confidentialité]('/privacy-policy)**
+
+## Réservation de droits
+
+Nous nous réservons le droit de demander que vous supprimez tous les liens ou tout lien particulier vers notre site Web.Vous approuvez de supprimer immédiatement tous les liens vers notre site Web sur demande.Nous nous réservons également le droit de modifier ces termes et conditions et il s'agit de la politique de liaison à tout moment.En liant continuellement sur notre site Web, vous acceptez d'être lié et suivez ces conditions de liaison.
+
+## Suppression des liens de notre site web
+
+Si vous trouvez un lien sur notre site Web offensant pour une raison quelconque, vous êtes libre de contacter et de nous informer à tout moment.Nous examinerons les demandes de supprimer des liens, mais nous ne sommes pas obligés de vous ou de vous répondre directement.
+Nous ne nous assurons pas que les informations sur ce site Web soient correctes, nous ne garantissons pas sa complétude ou sa précision;Nous ne promettons pas non plus de veiller à ce que le site Web reste disponible ou que le matériel sur le site Web soit tenu à jour.
+
+## Avertissement
+
+Dans la mesure maximale autorisée par la loi applicable, nous excluons toutes les représentations, garanties et conditions relatives à notre site Web et à l'utilisation de ce site Web. Rien dans ce disclaimer ne:
+
+-   limiter ou exclure notre responsabilité pour la mort ou la blessure corporelle;
+-   limiter ou exclure notre responsabilité pour la fraude ou la fausse déclaration frauduleuse;
+-   limiter l'une de nos responsabilités de quelque manière que ce soit de quelque manière que ce soit, qui n'est pas autorisée en vertu de la loi applicable, ou
+-   exclure l'un de nos passifs ou de vos passifs qui pourraient ne pas être exclus en vertu de la loi applicable.
+    Les limitations et interdictions de responsabilité fixées dans la présente section et ailleurs dans la présente dénoncé de non-responsabilité: a) sont soumis au paragraphe précédent; et (b) régir tous les passifs résultant de la responsabilité de non-responsabilité, y compris des passifs découlant du contrat, dans le délit et pour violation des droits légaux.
+    Tant que le site Web et les informations et services sur le site Web sont fournis gratuitement, nous ne serons pas responsables de la perte ou des dommages d'une nature.
