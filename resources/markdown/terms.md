@@ -66,7 +66,7 @@ Nous ne serons tenus responsables de tout contenu qui apparaît sur votre site W
 
 ## Votre vie privée
 
-**[Veuillez lire la politique de confidentialité]('/privacy-policy)**
+**[Veuillez lire la politique de confidentialité](/privacy-policy)**
 
 ## Réservation de droits
 
